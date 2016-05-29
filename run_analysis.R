@@ -1,5 +1,8 @@
 ## Set Working Directory
-setwd("C://Tejas//Learnings//Coursera//Getting_and_Cleaning_Data//Project")
+## setwd("C://Tejas//Learnings//Coursera//Getting_and_Cleaning_Data//Project")
+
+## Store Cuurent Working Directory.
+curr_wd <- getwd()
 
 library(data.table)
 
@@ -12,7 +15,9 @@ if (!file.exists('./UCI HAR Dataset.zip')){
 }
 
 ## Set Working directory to UCI HAR Dataset
-setwd("C://Tejas//Learnings//Coursera//Getting_and_Cleaning_Data//Project//UCI HAR Dataset")
+## setwd("C://Tejas//Learnings//Coursera//Getting_and_Cleaning_Data//Project//UCI HAR Dataset")
+setwd("./UCI HAR Dataset")
+
 
 ## 1. Merge the training and the test sets to create one data set
 
@@ -102,7 +107,9 @@ library(reshape2)
 new_data <- finalData[,names(finalData) != 'activityType']
 
 ## Output tidy dataset
-setwd("C://Tejas//Learnings//Coursera//Getting_and_Cleaning_Data//Project")
+## setwd("C://Tejas//Learnings//Coursera//Getting_and_Cleaning_Data//Project")
+setwd(curr_wd)
+
 
 ## Use melt to transform data by Activity and Subject variables.
 melted <- melt(new_data, id=c("subject","activity"))
