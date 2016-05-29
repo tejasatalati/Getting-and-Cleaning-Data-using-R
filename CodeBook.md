@@ -14,6 +14,7 @@ The data points are from accelerometer and gyroscope 3-axial raw signals. For ea
 the average of each variable for each activity and each subject is calculated as a part of the new dataset. These averages(mean), along with their corresponding Subject ID and Activity Type are written to the output file.
 
 The new field names used are as below:
+
  [1] "activity"                                
  [2] "subject"                                 
  [3] "Time_Body_AcclMtr_Mean_X"                
